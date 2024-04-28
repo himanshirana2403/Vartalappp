@@ -1,0 +1,96 @@
+*{
+    margin:0;
+   
+  }
+  body{
+    background-color: rgb(45, 150, 182);
+  }
+  .nav img{
+    display:block;
+   
+    height:8vh;
+    width:8vh;
+   margin-left: auto;
+   margin-right: auto;
+  }
+  .nav {
+    color: rgb(8, 73, 88);
+    height:8vh;
+    width:8vh;
+   margin-left: auto;
+   margin-right: auto;
+  }
+  .main{
+    margin:auto;
+    max-width: 100vh;
+    background-color: rgb(194, 198, 199);
+    height:75vh;
+    border-radius: 2vh;
+    overflow-y: auto;
+   
+  }
+  
+  
+  .mes{
+    padding:2vh;
+    width:20vh;
+   background-color: rgba(68, 115, 184, 0.753);
+   padding:20px;
+  margin:1vh;
+  border-radius: 2vh;
+  
+  }
+  .right{
+    float: right;
+    clear:both;
+
+  
+  }
+  .left{
+    float:left;
+    clear:both;
+   
+  }
+  .send{
+    padding: 2vh;
+  text-align: center;
+  
+  }
+ /* .send input{
+  
+    width:85vh;
+    padding: 1.5vh;
+    border-radius: 2px;
+    border-radius: 1vh;
+    
+  }*/
+  .send button{
+    padding: 1.5vh;
+    margin: 1vh;
+    width:10vh;
+    background-color: rgba(12, 117, 131, 0.6);
+    color:white;
+    font-size: 2.5vh;
+    cursor:pointer;
+  
+    border-radius: 2vh;
+  }
+ 
+#messageInp {
+  width: 40%; 
+  padding: 10px;
+  font-size: 16px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+}
+
+
+@media only screen and (max-width: 600px) {
+  #messageInp {
+    font-size: 14px; 
+    width:65%;
+    height:20px;
+  }
+}
+
+
