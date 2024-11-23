@@ -104,6 +104,9 @@ background: linear-gradient(90deg, rgb(13, 66, 106) 0%, rgba(28,225,244,1) 42%, 
     width:65%;
     height:20px;
   }
+  .main{
+    height: 71vh;
+  }
 }
 
 
