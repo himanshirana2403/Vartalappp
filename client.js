@@ -1,6 +1,7 @@
 //const { name } = require("ejs");
 
-const socket=io('http://localhost:8000');
+// const socket=io('http://localhost:8000');
+const socket=io('https://vartalappp-b6wwghlpt-himanshirana2403s-projects.vercel.app/');
 const form=document.getElementById('send-container');
 const messageInput=document.getElementById('messageInp');
 const messageContainer=document.querySelector('.main');
