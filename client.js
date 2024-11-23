@@ -1,34 +1,49 @@
 //const { name } = require("ejs");
 
 const socket=io('http://localhost:8000');
-
-
 const form=document.getElementById('send-container');
 const messageInput=document.getElementById('messageInp');
 const messageContainer=document.querySelector('.main');
 
 var audio =new Audio('pika.mp3');
 
-const append=(message,position)=>{
-    const messageElement =document.createElement('div');
-    messageElement.innerText=message;
+// const append=(message,position)=>{
+//     const messageElement =document.createElement('div');
+//     messageElement.innerText=message;
+//     messageElement.classList.add('mes');
+//     messageElement.classList.add(position);
+//     messageContainer.append(messageElement);
+//    if(position=='left'){
+
+//     audio.play();
+//    }
+// }
+const append = (message, position) => {
+    const messageElement = document.createElement('div');
+    messageElement.innerText = message;
     messageElement.classList.add('mes');
     messageElement.classList.add(position);
     messageContainer.append(messageElement);
-   if(position=='left'){
 
-    audio.play();
-   }
-}
+    // Play notification sound if the message is from the left (not the user)
+    if (position === 'left') {
+        audio.play();
+    }
+
+    // Scroll to the bottom
+    messageContainer.scrollTop = messageContainer.scrollHeight;
+};
 
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
     const message=messageInput.value;
-    append(`You:${message}`,'right');
+    if(message!='')
+    {
+    append(`You: ${message}`,'right');
     socket.emit('send',message);
     messageInput.value='';
-
+    }
 })
 
 
