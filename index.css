@@ -101,11 +101,15 @@ background: linear-gradient(90deg, rgb(13, 66, 106) 0%, rgba(28,225,244,1) 42%, 
 @media only screen and (max-width: 600px) {
   #messageInp {
     font-size: 14px; 
-    width:65%;
+    width:57%;
     height:20px;
   }
   .main{
     height: 71vh;
+    max-width:45vh;
+  }
+  .send{
+    padding:1vh;
   }
 }
 
